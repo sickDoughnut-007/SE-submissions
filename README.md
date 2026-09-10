@@ -2,7 +2,7 @@
 
 ## Student Details
 
-- **Name:** Akshay Gudur
+- **Name:** Akshay V Gudur
 - **SRN:** PES1UG24CS047
 
 ## Repository Structure
@@ -14,8 +14,14 @@ SE-submissions/
 │   ├── Requirements_Table_Lab_1.docx
 │   ├── Use_Case_Flow_Run_Daily_Audit.docx
 │   └── UML_use_case_diagram_LAB1.pdf
-└── LAB 2/
-    └── Lab2_Jira_EPICs_Burndown_Charts.pdf
+├── LAB 2/
+│   └── Lab2_Jira_EPICs_Burndown_Charts.pdf
+└── LAB 3/
+    ├── PES1UG24CS047_Component_Diagram.pdf
+    ├── PES1UG24CS047_Component_Diagram.png
+    ├── PES1UG24CS047_Component_Diagram.svg
+    ├── PES1UG24CS047_Architecture_Justification.docx
+    └── PES1UG24CS047_Architecture_Justification.pdf
 ```
 
 ## Lab 1
@@ -46,3 +52,25 @@ The `LAB 2` folder contains the Jira-based backlog and sprint simulation report.
 6. Sprint 2 evidence — 29 story points
 7. Sprint 2 burndown chart and interpretation
 8. Reflection on estimation, prioritization, sprint alignment, and team capacity
+
+## Lab 3
+
+**Component Modelling & Architectural Pattern Selection — Domain & SSL Certificate Expiry Alert System**
+
+The `LAB 3` folder contains the UML component diagram and a one-page architecture justification. The selected **Layered Architecture** separates presentation, application logic, and infrastructure.
+
+The diagram shows 8 components with provided and required interfaces, covering daily TLS and WHOIS checks, endpoint management, stored audit results, expiry alerts, notifications, and acknowledgement-based escalation control.
+
+### Deliverables
+
+1. UML Component Diagram — PDF
+3. One-page Architecture Justification — PDF
+
+### Architecture Justification
+
+- Comparison of Layered, Microservices, and Client-Server architectures
+- Selected architecture and two scenario-specific reasons
+- Security advantage through controlled access and protected credentials
+- Performance benefit through bounded asynchronous monitoring
+
+The design supports the target of checking 1,000 endpoints in under 3 minutes; benchmarking is required to verify this target.
