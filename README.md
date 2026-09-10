@@ -18,9 +18,6 @@ SE-submissions/
 │   └── Lab2_Jira_EPICs_Burndown_Charts.pdf
 └── LAB 3/
     ├── PES1UG24CS047_Component_Diagram.pdf
-    ├── PES1UG24CS047_Component_Diagram.png
-    ├── PES1UG24CS047_Component_Diagram.svg
-    ├── PES1UG24CS047_Architecture_Justification.docx
     └── PES1UG24CS047_Architecture_Justification.pdf
 ```
 
