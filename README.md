@@ -71,3 +71,12 @@ The diagram shows 8 components with provided and required interfaces, covering d
 - Performance benefit through bounded asynchronous monitoring
 
 The design supports the target of checking 1,000 endpoints in under 3 minutes; benchmarking is required to verify this target.
+
+## Lab 4
+
+**VibeCoding - Target Aim Trainer (assigned project 47)**
+
+`LAB 4` contains the updated pygame code, collision fix, game-over screen,
+replay with difficulty selection, generated sound feedback, tests, and chat export.
+Four implementation commits separate the fix and the three new features.
+See `LAB 4/README.md` for setup and pending recording evidence.

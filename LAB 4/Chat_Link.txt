@@ -1,0 +1,2 @@
+Pending: use this conversation's Share option and paste the real shared conversation URL here.
+The assigned repository README requests the complete chat/page link in addition to the handout's PDF export.

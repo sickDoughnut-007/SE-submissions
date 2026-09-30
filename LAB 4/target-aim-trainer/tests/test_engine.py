@@ -1,5 +1,6 @@
 import os
 import unittest
+from unittest.mock import Mock
 
 os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
 os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
@@ -84,3 +85,21 @@ class EngineTests(unittest.TestCase):
                 self.assertLessEqual(target.x + target.base_radius, self.engine.width)
                 self.assertGreaterEqual(target.y - target.base_radius, self.engine.hud_height)
                 self.assertLessEqual(target.y + target.base_radius, self.engine.height - 30)
+
+    def test_distinct_sound_feedback_for_hit_miss_timeout_and_end(self):
+        engine = self.engine
+        engine.sound.play = Mock()
+        engine._handle_click((engine.target.x, engine.target.y))
+        engine.sound.play.assert_called_once_with("hit")
+        engine.sound.play.reset_mock()
+        engine._handle_click((0, 0))
+        engine.sound.play.assert_called_once_with("miss")
+        engine.sound.play.reset_mock()
+        engine.target.age = engine.target.lifespan_frames - 1
+        engine.update()
+        engine.sound.play.assert_called_once_with("miss")
+        engine.sound.play.reset_mock()
+        engine.time_left_frames = 1
+        engine.update()
+        engine.update()
+        engine.sound.play.assert_called_once_with("end")

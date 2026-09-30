@@ -98,3 +98,38 @@ Submission is only the following three things:
 - [] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
 - [] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
 - [] The Chat/LLM used page link, with the complete chat history
+---
+
+## Lab 4 implementation
+
+Student: **Akshay V Gudur - PES1UG24CS047**
+
+The original assignment above is retained for reference. All four tasks are implemented:
+
+1. Hit testing uses the same integer radius as drawing, and expired targets cannot be hit.
+2. A game-over screen shows the final score, accuracy, hits, and misses, and waits for input.
+3. Replay with Easy / Medium / Hard buttons or the 1 / 2 / 3 keys resets the entire round.
+4. Generated WAV sounds distinguish hits, misses (including timeouts), and round completion.
+
+Controls: left click to shoot; Q / Esc to exit; M to mute or unmute.
+The first round starts on Medium. Difficulty selection is available after game over.
+Audio failure leaves the game playable and displays "No audio device".
+
+| Difficulty | Starting radius | Minimum radius | Target lifespan at 60 FPS |
+| --- | ---: | ---: | ---: |
+| Easy | 50 px | 16 px | 2.5 s |
+| Medium | 40 px | 12 px | 1.5 s |
+| Hard | 26 px | 8 px | 0.75 s |
+
+The original 60 FPS, frame-based timing is retained; a round is 1,800 updates
+(nominally 30 seconds). A slow machine can take longer in wall-clock time.
+
+Run the game with `python main.py` and tests with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The four implementation commits contain one collision fix and one commit for each
+of game over, replay/difficulty, and sounds. Before/after recordings must be made
+on the student's computer and included in the lab submission.

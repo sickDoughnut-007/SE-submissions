@@ -1,6 +1,7 @@
 import pygame
 import random
 from .target import Target
+from .sound import SoundFeedback
 
 # Game Engine
 
@@ -23,6 +24,7 @@ class GameEngine:
         self.font = pygame.font.SysFont("Arial", 26)
         self.title_font = pygame.font.SysFont("Arial", 48, bold=True)
         self.quit_requested = False
+        self.sound = SoundFeedback()
         self.replay_buttons = {
             name: pygame.Rect(self.width // 2 - 225 + index * 155, 330, 140, 50)
             for index, name in enumerate(DIFFICULTIES)
@@ -45,6 +47,9 @@ class GameEngine:
         return Target(x, y, **DIFFICULTIES[self.difficulty])
 
     def handle_event(self, event):
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_m:
+            self.sound.toggle_mute()
+            return
         if event.type == pygame.KEYDOWN and event.key in (pygame.K_ESCAPE, pygame.K_q):
             self.quit_requested = True
             return
@@ -66,9 +71,11 @@ class GameEngine:
         if self.target.contains_point(x, y):
             self.hits += 1
             self.score += 1
+            self.sound.play("hit")
             self.target = self._spawn_target()
         else:
             self.misses += 1
+            self.sound.play("miss")
 
     def handle_input(self):
         # Reserved for continuously-held-key input; this game is
@@ -82,11 +89,13 @@ class GameEngine:
         self.time_left_frames -= 1
         if self.time_left_frames <= 0:
             self.game_over = True
+            self.sound.play("end")
             return
 
         self.target.update()
         if self.target.expired():
             self.misses += 1  # letting a target time out counts as a miss too
+            self.sound.play("miss")
             self.target = self._spawn_target()
 
     def accuracy(self):
@@ -112,7 +121,7 @@ class GameEngine:
 
         acc_text = self.font.render(f"Accuracy: {self.accuracy()}%", True, WHITE)
         screen.blit(acc_text, (self.width // 2 - 90, 10))
-        self._center_text(screen, f"{self.difficulty}  |  Left click to hit  |  Q / Esc to quit", self.height - 22)
+        self._center_text(screen, f"{self.difficulty} | {self.sound.status()} (M) | Q / Esc: quit", self.height - 22)
 
     def _center_text(self, screen, text, y, font=None, color=WHITE):
         label = (font or self.font).render(text, True, color)
@@ -129,4 +138,4 @@ class GameEngine:
             label = self.font.render(name, True, WHITE)
             screen.blit(label, label.get_rect(center=rect.center))
         self._center_text(screen, "Replay: click a difficulty or press 1 / 2 / 3", 410)
-        self._center_text(screen, "Q / Esc: exit", 450)
+        self._center_text(screen, f"Q / Esc: exit | {self.sound.status()} (M)", 450)
