@@ -1,14 +1,17 @@
 # Recording evidence
 
-Record and add these actual videos before the final submission:
+The following recordings are uploaded in this folder:
 
-- `before.mp4`: at least 10 seconds of the unmodified starter, showing the shrinking-target collision bug.
-- `after.mp4`: at least 10 seconds showing the corrected game and new features. Play a complete round first; begin recording its last few seconds, then show the results screen and replay buttons. Capture system audio.
-- `push_recording.mp4`: record the real terminal push and then the GitHub page showing LAB 4, the updated code, and the commit history.
+| File | Intended evidence |
+| --- | --- |
+| [before.mp4](before.mp4) | Original game and shrinking-target collision bug |
+| [after.mp4](after.mp4) | Corrected game and new features |
+| [push_recording.mp4](push_recording.mp4) | Terminal push and subsequent GitHub verification |
 
-These files are intentionally not supplied by the coding assistant: the screen
-recordings must capture the student's actual game and GitHub push.
+The lab requires at least 10 seconds each for the before and after gameplay
+recordings. The updated-game recording should demonstrate gameplay, results,
+replay/difficulty selection, and sound feedback.
 
-If the push video captures the final evidence upload, its own completed recording
-must be added in a follow-up commit after recording stops. GitHub rejects files
-larger than 100 MiB; keep the short videos below that size.
+All three files are present on GitHub. Their playback, duration, and audio have
+not been independently reviewed. The push recording was uploaded after the
+recorded push finished, through a separate evidence commit.

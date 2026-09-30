@@ -37,11 +37,18 @@ The gameplay and game-over screens were rendered and visually inspected.
 The original bug was reproduced before editing and is covered by a regression test.
 This is simulated validation, not a recording of the student's laptop.
 
-## Limits and student completion
+## Timing and submission status
 
 Original frame-based timing is retained: nominal round length is 30 seconds at
-60 FPS; lag can extend elapsed wall-clock time. Check audible feedback locally.
-The actual recordings, real shared-chat link, personal fork creation, and recorded
-push remain to be performed by the student. The four implementation commits are
-prepared locally and have not been pushed. Adding video evidence may create a
-fifth or later commit, which still satisfies the minimum of four.
+60 FPS; lag can extend elapsed wall-clock time.
+
+The personal game repository has been created and the four implementation
+commits have been published there and in this submission repository. The actual
+`before.mp4`, `after.mp4`, and `push_recording.mp4` files are uploaded under
+`videos/`. `Chat_Link.txt` contains the shared ChatGPT conversation URL, and
+`Chat_History.pdf` contains the conversation snapshot available at export time.
+
+The one debugging fix and three feature commits satisfy the minimum of four;
+additional documentation and evidence commits preserve that history. GitHub file
+presence and commit history have been checked. Video playback, duration, and
+audible feedback have not been independently reviewed.

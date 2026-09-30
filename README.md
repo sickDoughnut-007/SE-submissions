@@ -16,9 +16,31 @@ SE-submissions/
 │   └── UML_use_case_diagram_LAB1.pdf
 ├── LAB 2/
 │   └── Lab2_Jira_EPICs_Burndown_Charts.pdf
-└── LAB 3/
-    ├── PES1UG24CS047_Component_Diagram.pdf
-    └── PES1UG24CS047_Architecture_Justification.pdf
+├── LAB 3/
+│   ├── PES1UG24CS047_Component_Diagram.pdf
+│   └── PES1UG24CS047_Architecture_Justification.pdf
+└── LAB 4/
+    ├── README.md
+    ├── Chat_History.pdf
+    ├── Chat_Link.txt
+    ├── Implementation_Notes.md
+    ├── target-aim-trainer/
+    │   ├── README.md
+    │   ├── main.py
+    │   ├── requirements.txt
+    │   ├── game/
+    │   │   ├── game_engine.py
+    │   │   ├── target.py
+    │   │   └── sound.py
+    │   └── tests/
+    │       ├── test_engine.py
+    │       ├── test_target.py
+    │       └── test_sound.py
+    └── videos/
+        ├── README.md
+        ├── before.mp4
+        ├── after.mp4
+        └── push_recording.mp4
 ```
 
 ## Lab 1
@@ -76,7 +98,29 @@ The design supports the target of checking 1,000 endpoints in under 3 minutes; b
 
 **VibeCoding - Target Aim Trainer (assigned project 47)**
 
-`LAB 4` contains the updated pygame code, collision fix, game-over screen,
-replay with difficulty selection, generated sound feedback, tests, and chat export.
-Four implementation commits separate the fix and the three new features.
-See `LAB 4/README.md` for setup and pending recording evidence.
+The [LAB 4 submission](LAB%204/README.md) contains the completed Python/Pygame
+aim trainer, gameplay and push recordings, chat evidence, implementation notes,
+and regression tests.
+
+### Implemented changes
+
+1. **Collision fix:** hit detection matches the target's visible shrinking radius.
+2. **Game-over screen:** displays final score, accuracy, hits, and misses.
+3. **Replay and difficulty:** Easy, Medium, and Hard can be selected after a round.
+4. **Sound feedback:** distinct effects for hits, missed clicks, target timeouts,
+   and round completion; M toggles mute.
+
+One debugging commit and three separate feature commits implement the four
+assigned tasks. All four have been published to this repository and the
+[personal game repository](https://github.com/sickDoughnut-007/47_target-aim-trainer).
+
+### Submitted evidence
+
+- [Before gameplay recording](LAB%204/videos/before.mp4)
+- [After gameplay recording](LAB%204/videos/after.mp4)
+- [Recorded push and GitHub verification](LAB%204/videos/push_recording.mp4)
+- [Chat history PDF](LAB%204/Chat_History.pdf) and [shared chat link](LAB%204/Chat_Link.txt)
+- [Implementation notes](LAB%204/Implementation_Notes.md)
+
+The implementation passed 14 automated checks and rendered-screen review.
+See the Lab 4 README for setup, controls, and timing details.
