@@ -6,6 +6,11 @@ from .target import Target
 
 WHITE = (255, 255, 255)
 RED = (220, 60, 60)
+DIFFICULTIES = {
+    "Easy": {"base_radius": 50, "min_radius": 16, "lifespan_frames": 150},
+    "Medium": {"base_radius": 40, "min_radius": 12, "lifespan_frames": 90},
+    "Hard": {"base_radius": 26, "min_radius": 8, "lifespan_frames": 45},
+}
 
 class GameEngine:
     def __init__(self, width, height):
@@ -14,29 +19,44 @@ class GameEngine:
 
         self.margin = 60
         self.hud_height = 60
-        self.target = self._spawn_target()
-
         self.round_seconds = 30
-        self.time_left_frames = self.round_seconds * 60
-
-        self.hits = 0
-        self.misses = 0
-        self.score = 0
         self.font = pygame.font.SysFont("Arial", 26)
         self.title_font = pygame.font.SysFont("Arial", 48, bold=True)
-        self.game_over = False
         self.quit_requested = False
+        self.replay_buttons = {
+            name: pygame.Rect(self.width // 2 - 225 + index * 155, 330, 140, 50)
+            for index, name in enumerate(DIFFICULTIES)
+        }
+        self.start_round("Medium")
+
+    def start_round(self, difficulty):
+        if difficulty not in DIFFICULTIES:
+            raise ValueError(f"Unknown difficulty: {difficulty}")
+        self.difficulty = difficulty
+        self.time_left_frames = self.round_seconds * 60
+        self.hits = self.misses = self.score = 0
+        self.game_over = False
+        self.target = self._spawn_target()
 
     def _spawn_target(self):
+        radius = DIFFICULTIES[self.difficulty]["base_radius"]
         x = random.randint(self.margin, self.width - self.margin)
-        y = random.randint(self.margin + self.hud_height, self.height - self.margin)
-        return Target(x, y)
+        y = random.randint(self.margin + self.hud_height, self.height - max(self.margin, radius + 40))
+        return Target(x, y, **DIFFICULTIES[self.difficulty])
 
     def handle_event(self, event):
         if event.type == pygame.KEYDOWN and event.key in (pygame.K_ESCAPE, pygame.K_q):
             self.quit_requested = True
             return
         if self.game_over:
+            shortcuts = {pygame.K_1: "Easy", pygame.K_2: "Medium", pygame.K_3: "Hard"}
+            if event.type == pygame.KEYDOWN and event.key in shortcuts:
+                self.start_round(shortcuts[event.key])
+            elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                for name, rect in self.replay_buttons.items():
+                    if rect.collidepoint(event.pos):
+                        self.start_round(name)
+                        break
             return
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             self._handle_click(event.pos)
@@ -92,6 +112,7 @@ class GameEngine:
 
         acc_text = self.font.render(f"Accuracy: {self.accuracy()}%", True, WHITE)
         screen.blit(acc_text, (self.width // 2 - 90, 10))
+        self._center_text(screen, f"{self.difficulty}  |  Left click to hit  |  Q / Esc to quit", self.height - 22)
 
     def _center_text(self, screen, text, y, font=None, color=WHITE):
         label = (font or self.font).render(text, True, color)
@@ -103,4 +124,9 @@ class GameEngine:
         self._center_text(screen, f"Final score: {self.score}", 190)
         self._center_text(screen, f"Accuracy: {self.accuracy():.1f}%", 235)
         self._center_text(screen, f"Hits: {self.hits}    Misses: {self.misses}", 280)
-        self._center_text(screen, "Press Q or Esc to exit", 390)
+        for name, rect in self.replay_buttons.items():
+            pygame.draw.rect(screen, (44, 94, 130), rect, border_radius=8)
+            label = self.font.render(name, True, WHITE)
+            screen.blit(label, label.get_rect(center=rect.center))
+        self._center_text(screen, "Replay: click a difficulty or press 1 / 2 / 3", 410)
+        self._center_text(screen, "Q / Esc: exit", 450)
