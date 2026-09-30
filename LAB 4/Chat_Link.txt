@@ -1,2 +1,1 @@
-Pending: use this conversation's Share option and paste the real shared conversation URL here.
-The assigned repository README requests the complete chat/page link in addition to the handout's PDF export.
+https://chatgpt.com/share/6abc808d-abd8-83ee-89cb-cb724ab0ae10
