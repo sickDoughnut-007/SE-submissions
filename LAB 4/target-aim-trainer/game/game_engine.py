@@ -23,7 +23,9 @@ class GameEngine:
         self.misses = 0
         self.score = 0
         self.font = pygame.font.SysFont("Arial", 26)
+        self.title_font = pygame.font.SysFont("Arial", 48, bold=True)
         self.game_over = False
+        self.quit_requested = False
 
     def _spawn_target(self):
         x = random.randint(self.margin, self.width - self.margin)
@@ -31,6 +33,9 @@ class GameEngine:
         return Target(x, y)
 
     def handle_event(self, event):
+        if event.type == pygame.KEYDOWN and event.key in (pygame.K_ESCAPE, pygame.K_q):
+            self.quit_requested = True
+            return
         if self.game_over:
             return
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -71,6 +76,9 @@ class GameEngine:
         return round(100 * self.hits / total, 1)
 
     def render(self, screen):
+        if self.game_over:
+            self._render_game_over(screen)
+            return
         r = self.target.drawn_radius()
         pygame.draw.circle(screen, RED, (self.target.x, self.target.y), r)
         pygame.draw.circle(screen, WHITE, (self.target.x, self.target.y), r, 2)
@@ -85,7 +93,14 @@ class GameEngine:
         acc_text = self.font.render(f"Accuracy: {self.accuracy()}%", True, WHITE)
         screen.blit(acc_text, (self.width // 2 - 90, 10))
 
-        if self.game_over and not getattr(self, "_game_over_logged", False):
-            # NOTE: no proper game-over screen yet - see Task 2 in the README.
-            print(f"Time's up! Final score: {self.score}  Accuracy: {self.accuracy()}%")
-            self._game_over_logged = True
+    def _center_text(self, screen, text, y, font=None, color=WHITE):
+        label = (font or self.font).render(text, True, color)
+        screen.blit(label, label.get_rect(center=(self.width // 2, y)))
+
+    def _render_game_over(self, screen):
+        screen.fill((24, 27, 36))
+        self._center_text(screen, "ROUND COMPLETE", 100, self.title_font)
+        self._center_text(screen, f"Final score: {self.score}", 190)
+        self._center_text(screen, f"Accuracy: {self.accuracy():.1f}%", 235)
+        self._center_text(screen, f"Hits: {self.hits}    Misses: {self.misses}", 280)
+        self._center_text(screen, "Press Q or Esc to exit", 390)

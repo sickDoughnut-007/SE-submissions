@@ -28,6 +28,9 @@ def main():
                 running = False
             engine.handle_event(event)
 
+        if not running or engine.quit_requested:
+            break
+
         engine.handle_input()
         engine.update()
         engine.render(SCREEN)
