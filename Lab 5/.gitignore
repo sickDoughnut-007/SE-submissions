@@ -1,0 +1,5 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+seating_chart.txt

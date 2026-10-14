@@ -1,0 +1,7 @@
+Seating chart exported to: seating_chart.txt
+Is B1 available: True
+Promo price: 16.0
+Ticket Hash: dd3c57eb06d7bfaae554936687c501a1
+Booking PIN: 3880
+Sold count: 1
+Box office token: BOX_OFFICE_SECRET_PASS_2026

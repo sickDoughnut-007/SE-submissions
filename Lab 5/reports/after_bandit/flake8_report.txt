@@ -1,0 +1,5 @@
+ticket_booking_system.py:6:1: F401 'math' imported but unused
+ticket_booking_system.py:19:80: E501 line too long (82 > 79 characters)
+ticket_booking_system.py:32:5: F841 local variable 'booking_fee' is assigned to but never used
+ticket_booking_system.py:33:35: E711 comparison to None should be 'if cond is None:'
+ticket_booking_system.py:48:80: E501 line too long (90 > 79 characters)
