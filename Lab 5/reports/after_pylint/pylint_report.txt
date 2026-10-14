@@ -1,0 +1,7 @@
+************* Module ticket_booking_system
+ticket_booking_system.py:37:7: C0121: Comparison 'theater_seats.get(seat_id) == None' should be 'theater_seats.get(seat_id) is None' (singleton-comparison)
+ticket_booking_system.py:6:0: W0611: Unused import math (unused-import)
+
+-----------------------------------
+Your code has been rated at 9.62/10
+
