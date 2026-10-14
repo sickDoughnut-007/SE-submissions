@@ -19,28 +19,80 @@ SE-submissions/
 ├── LAB 3/
 │   ├── PES1UG24CS047_Component_Diagram.pdf
 │   └── PES1UG24CS047_Architecture_Justification.pdf
-└── LAB 4/
+├── LAB 4/
+│   ├── README.md
+│   ├── Chat_History.pdf
+│   ├── Chat_Link.txt
+│   ├── Implementation_Notes.md
+│   ├── target-aim-trainer/
+│   │   ├── README.md
+│   │   ├── main.py
+│   │   ├── requirements.txt
+│   │   ├── game/
+│   │   │   ├── game_engine.py
+│   │   │   ├── target.py
+│   │   │   └── sound.py
+│   │   └── tests/
+│   │       ├── test_engine.py
+│   │       ├── test_target.py
+│   │       └── test_sound.py
+│   └── videos/
+│       ├── README.md
+│       ├── before.mp4
+│       ├── after.mp4
+│       └── push_recording.mp4
+└── Lab 5/
+    ├── original/
+    │   └── ticket_booking_system.py
+    ├── reports/
+    │   ├── after/
+    │   │   ├── analysis_runs.json
+    │   │   ├── bandit_report.txt
+    │   │   ├── bandit_stderr.txt
+    │   │   ├── flake8_report.txt
+    │   │   ├── flake8_stderr.txt
+    │   │   ├── program_output.txt
+    │   │   ├── pylint_report.txt
+    │   │   ├── pylint_stderr.txt
+    │   │   ├── tests_report.txt
+    │   │   └── tests_run.json
+    │   ├── after_bandit/
+    │   │   ├── analysis_runs.json
+    │   │   ├── bandit_report.txt
+    │   │   ├── bandit_stderr.txt
+    │   │   ├── flake8_report.txt
+    │   │   ├── flake8_stderr.txt
+    │   │   ├── pylint_report.txt
+    │   │   └── pylint_stderr.txt
+    │   ├── after_pylint/
+    │   │   ├── analysis_runs.json
+    │   │   ├── bandit_report.txt
+    │   │   ├── bandit_stderr.txt
+    │   │   ├── flake8_report.txt
+    │   │   ├── flake8_stderr.txt
+    │   │   ├── pylint_report.txt
+    │   │   └── pylint_stderr.txt
+    │   └── before/
+    │       ├── analysis_runs.json
+    │       ├── bandit_report.txt
+    │       ├── bandit_stderr.txt
+    │       ├── flake8_report.txt
+    │       ├── flake8_stderr.txt
+    │       ├── program_output.txt
+    │       ├── pylint_report.txt
+    │       └── pylint_stderr.txt
+    ├── tests/
+    │   └── test_ticket_booking_system.py
+    ├── .gitattributes
+    ├── .gitignore
+    ├── fork_commits.json
+    ├── issues.md
     ├── README.md
-    ├── Chat_History.pdf
-    ├── Chat_Link.txt
-    ├── Implementation_Notes.md
-    ├── target-aim-trainer/
-    │   ├── README.md
-    │   ├── main.py
-    │   ├── requirements.txt
-    │   ├── game/
-    │   │   ├── game_engine.py
-    │   │   ├── target.py
-    │   │   └── sound.py
-    │   └── tests/
-    │       ├── test_engine.py
-    │       ├── test_target.py
-    │       └── test_sound.py
-    └── videos/
-        ├── README.md
-        ├── before.mp4
-        ├── after.mp4
-        └── push_recording.mp4
+    ├── reflection.md
+    ├── requirements.txt
+    ├── submission_manifest.json
+    ├── ticket_booking_system.py
+    └── tool_versions.txt
 ```
 
 ## Lab 1
