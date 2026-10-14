@@ -1,0 +1,17 @@
+[
+  {
+    "tool": "pylint",
+    "command": "python -m pylint --persistent=no ticket_booking_system.py",
+    "exit_code": 0
+  },
+  {
+    "tool": "bandit",
+    "command": "python -m bandit -r ticket_booking_system.py",
+    "exit_code": 0
+  },
+  {
+    "tool": "flake8",
+    "command": "python -m flake8 ticket_booking_system.py",
+    "exit_code": 0
+  }
+]

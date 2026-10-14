@@ -1,0 +1,23 @@
+[
+  {
+    "stage": 1,
+    "tool": "Bandit",
+    "fork_commit": "e45339ba3f13731fd0cdcc186fb403443b117d3f",
+    "message": "fix(bandit): secure promotions, ticket identifiers, PINs and chart export",
+    "url": "https://github.com/sickDoughnut-007/L5_45_ticket_booking_system/commit/e45339ba3f13731fd0cdcc186fb403443b117d3f"
+  },
+  {
+    "stage": 2,
+    "tool": "Pylint",
+    "fork_commit": "cc245a1c8da83cd239405202c809bc095ad0199b",
+    "message": "fix(pylint): isolate history, manage resources and clarify booking logic",
+    "url": "https://github.com/sickDoughnut-007/L5_45_ticket_booking_system/commit/cc245a1c8da83cd239405202c809bc095ad0199b"
+  },
+  {
+    "stage": 3,
+    "tool": "Flake8",
+    "fork_commit": "8e7abdd8fbe43eb26f349d2a72c67c40781359ca",
+    "message": "fix(flake8): finish style cleanup and document verified Lab 5 results",
+    "url": "https://github.com/sickDoughnut-007/L5_45_ticket_booking_system/commit/8e7abdd8fbe43eb26f349d2a72c67c40781359ca"
+  }
+]

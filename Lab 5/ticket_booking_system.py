@@ -3,7 +3,6 @@
 import hashlib
 import re
 import secrets
-import math
 
 theater_seats = {
     "A1": {"tier": "Standard", "price": 12.0, "is_sold": False},
@@ -13,7 +12,7 @@ theater_seats = {
 
 
 def reserve_seat(seat_id, customer, order_history=None):
-    """Reserve an available seat and optionally append to caller-owned history."""
+    """Reserve an available seat; optionally update caller-owned history."""
     if order_history is None:
         order_history = []
     if seat_id not in theater_seats or theater_seats[seat_id]["is_sold"]:
@@ -34,7 +33,7 @@ def cancel_seat(seat_id):
 
 def check_seat_status(seat_id):
     """Return whether a known seat is available for booking."""
-    if theater_seats.get(seat_id) == None:
+    if theater_seats.get(seat_id) is None:
         return False
     return not theater_seats[seat_id]["is_sold"]
 
@@ -53,7 +52,9 @@ def compute_discounted_price(seat_id, promo_expr):
         promo_expr.strip(),
     )
     if match is None:
-        raise ValueError("Promotion must be 'base_price * factor', with 0 <= factor <= 1")
+        raise ValueError(
+            "Promotion must be 'base_price * factor', with 0 <= factor <= 1"
+        )
     return round(base_price * float(match.group(1)), 2)
 
 

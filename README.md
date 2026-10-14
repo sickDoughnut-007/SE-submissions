@@ -124,3 +124,16 @@ assigned tasks. All four have been published to this repository and the
 
 The implementation passed 14 automated checks and rendered-screen review.
 See the Lab 4 README for setup, controls, and timing details.
+
+## Lab 5
+
+**Static Code Analysis - Ticket Booking System**
+
+The [Lab 5 submission](Lab%205/README.md) contains the cleaned Python script,
+15 documented issue categories, reflections, before-and-after Pylint/Bandit/
+Flake8 reports, intermediate reports, and 15 passing regression tests.
+
+Final results: **Pylint 10.00/10**, **Bandit 0 findings**, **Flake8 0 violations**.
+Three tool-focused commits are mirrored from the
+[personal fork](https://github.com/sickDoughnut-007/L5_45_ticket_booking_system).
+The reflection document identifies the missing questions in the supplied PDF.
