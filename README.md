@@ -41,58 +41,81 @@ SE-submissions/
 │       ├── before.mp4
 │       ├── after.mp4
 │       └── push_recording.mp4
-└── Lab 5/
-    ├── original/
-    │   └── ticket_booking_system.py
-    ├── reports/
-    │   ├── after/
-    │   │   ├── analysis_runs.json
-    │   │   ├── bandit_report.txt
-    │   │   ├── bandit_stderr.txt
-    │   │   ├── flake8_report.txt
-    │   │   ├── flake8_stderr.txt
-    │   │   ├── program_output.txt
-    │   │   ├── pylint_report.txt
-    │   │   ├── pylint_stderr.txt
-    │   │   ├── tests_report.txt
-    │   │   └── tests_run.json
-    │   ├── after_bandit/
-    │   │   ├── analysis_runs.json
-    │   │   ├── bandit_report.txt
-    │   │   ├── bandit_stderr.txt
-    │   │   ├── flake8_report.txt
-    │   │   ├── flake8_stderr.txt
-    │   │   ├── pylint_report.txt
-    │   │   └── pylint_stderr.txt
-    │   ├── after_pylint/
-    │   │   ├── analysis_runs.json
-    │   │   ├── bandit_report.txt
-    │   │   ├── bandit_stderr.txt
-    │   │   ├── flake8_report.txt
-    │   │   ├── flake8_stderr.txt
-    │   │   ├── pylint_report.txt
-    │   │   └── pylint_stderr.txt
-    │   └── before/
-    │       ├── analysis_runs.json
-    │       ├── bandit_report.txt
-    │       ├── bandit_stderr.txt
-    │       ├── flake8_report.txt
-    │       ├── flake8_stderr.txt
-    │       ├── program_output.txt
-    │       ├── pylint_report.txt
-    │       └── pylint_stderr.txt
-    ├── tests/
-    │   └── test_ticket_booking_system.py
-    ├── .gitattributes
+├── Lab 5/
+│   ├── original/
+│   │   └── ticket_booking_system.py
+│   ├── reports/
+│   │   ├── after/
+│   │   │   ├── analysis_runs.json
+│   │   │   ├── bandit_report.txt
+│   │   │   ├── bandit_stderr.txt
+│   │   │   ├── flake8_report.txt
+│   │   │   ├── flake8_stderr.txt
+│   │   │   ├── program_output.txt
+│   │   │   ├── pylint_report.txt
+│   │   │   ├── pylint_stderr.txt
+│   │   │   ├── tests_report.txt
+│   │   │   └── tests_run.json
+│   │   ├── after_bandit/
+│   │   │   ├── analysis_runs.json
+│   │   │   ├── bandit_report.txt
+│   │   │   ├── bandit_stderr.txt
+│   │   │   ├── flake8_report.txt
+│   │   │   ├── flake8_stderr.txt
+│   │   │   ├── pylint_report.txt
+│   │   │   └── pylint_stderr.txt
+│   │   ├── after_pylint/
+│   │   │   ├── analysis_runs.json
+│   │   │   ├── bandit_report.txt
+│   │   │   ├── bandit_stderr.txt
+│   │   │   ├── flake8_report.txt
+│   │   │   ├── flake8_stderr.txt
+│   │   │   ├── pylint_report.txt
+│   │   │   └── pylint_stderr.txt
+│   │   └── before/
+│   │       ├── analysis_runs.json
+│   │       ├── bandit_report.txt
+│   │       ├── bandit_stderr.txt
+│   │       ├── flake8_report.txt
+│   │       ├── flake8_stderr.txt
+│   │       ├── program_output.txt
+│   │       ├── pylint_report.txt
+│   │       └── pylint_stderr.txt
+│   ├── tests/
+│   │   └── test_ticket_booking_system.py
+│   ├── .gitattributes
+│   ├── .gitignore
+│   ├── fork_commits.json
+│   ├── issues.md
+│   ├── README.md
+│   ├── reflection.md
+│   ├── requirements.txt
+│   ├── submission_manifest.json
+│   ├── ticket_booking_system.py
+│   └── tool_versions.txt
+└── Lab 6/
     ├── .gitignore
-    ├── fork_commits.json
-    ├── issues.md
+    ├── BranchCoverageTest_mobile_data_plan.py
+    ├── CodeCoverageTest_mobile_data_plan.py
     ├── README.md
-    ├── reflection.md
+    ├── mobile_data_plan.py
+    ├── pytest.ini
+    ├── reports/
+    │   ├── branch_coverage.json
+    │   ├── branch_coverage.txt
+    │   ├── code_coverage.json
+    │   ├── code_coverage.txt
+    │   ├── initial_branch.json
+    │   ├── initial_branch.txt
+    │   ├── initial_line.json
+    │   ├── initial_line.txt
+    │   └── summary.json
     ├── requirements.txt
-    ├── submission_manifest.json
-    ├── ticket_booking_system.py
-    └── tool_versions.txt
+    ├── run_coverage.py
+    ├── screenshots/
+    │   ├── branch_coverage.png
+    │   └── code_coverage.png
+    └── test_mobile_data_plan.py
 ```
 
 ## Lab 1
