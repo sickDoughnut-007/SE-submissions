@@ -74,10 +74,11 @@ line and branch measurements.
 
 ## Evidence
 
-Only final results exceeding 90% have screenshots. The screenshots below show
-verbatim captured terminal output rendered in a browser for legibility; they
-are not native terminal-window captures. The matching text and JSON reports
-retain the measured results. The initial baseline is provided as text/JSON only.
+Only final results exceeding 90% have screenshots. The screenshots below are
+actual Windows Terminal captures of the code and branch coverage runs, supplied
+by the student. The text cursor and mouse pointer are absent from the captures.
+The matching text and JSON reports retain the measured results. The initial
+baseline is provided as text/JSON only.
 
 ![Final code coverage output](screenshots/code_coverage.png)
 

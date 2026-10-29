@@ -1,6 +1,6 @@
 > python -m coverage run --source=mobile_data_plan -m pytest -q CodeCoverageTest_mobile_data_plan.py
 .............                                                            [100%]
-13 passed in 0.49s
+13 passed in 0.06s
 
 > python -m coverage report -m
 Name                  Stmts   Miss  Cover   Missing

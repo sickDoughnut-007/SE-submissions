@@ -219,7 +219,7 @@ The reflection document identifies the missing questions in the supplied PDF.
 
 The [Lab 6 submission](Lab%206/README.md) includes the unchanged assigned
 application, two starter tests, separate code and branch coverage test files,
-baseline and final reports, and screenshots of captured final terminal output.
+baseline and final reports, and actual Windows Terminal screenshots of the final runs.
 
 - Code coverage: **37/37 statements (100%)**, 13 passing tests.
 - Branch coverage: **26/26 branch outcomes (100%)**, 53 passing tests.
@@ -227,4 +227,4 @@ baseline and final reports, and screenshots of captured final terminal output.
 - Two separate commits add the code-coverage and branch-coverage deliverables.
 
 The Lab 6 README explains the results, boundaries, reproduction commands,
-and screenshot capture method.
+and the native terminal screenshots.
