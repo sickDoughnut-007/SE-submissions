@@ -68,32 +68,24 @@ python -m pytest -q
 
 `pytest.ini` enables automatic discovery of the required capitalized test
 filenames. The combined run collects 68 tests: 2 starter + 13 code + 53 branch.
-To regenerate all saved text and JSON reports, run `python run_coverage.py`.
-The runner uses separate coverage data files for every stage to avoid mixing
-line and branch measurements.
+Optional local text and JSON reports can be generated with `python run_coverage.py`.
+The generated `reports/` folder is ignored by Git and is not part of the submission.
+The runner uses separate coverage data files for every stage.
 
 ## Evidence
 
 Only final results exceeding 90% have screenshots. The screenshots below are
 actual Windows Terminal captures of the code and branch coverage runs, supplied
 by the student. The text cursor and mouse pointer are absent from the captures.
-The matching text and JSON reports retain the measured results. The initial
-baseline is provided as text/JSON only.
+These screenshots provide the required coverage analysis output.
 
 ![Final code coverage output](screenshots/code_coverage.png)
 
 ![Final branch coverage output](screenshots/branch_coverage.png)
 
-- [Code coverage terminal output](reports/code_coverage.txt)
-- [Branch coverage terminal output](reports/branch_coverage.txt)
-- [Code coverage JSON](reports/code_coverage.json)
-- [Branch coverage JSON](reports/branch_coverage.json)
-- [Initial line coverage](reports/initial_line.txt)
-- [Initial branch coverage](reports/initial_branch.txt)
-
 ## Commit structure
 
-1. Code coverage tests, line-coverage report, and final code-coverage screenshot.
-2. Branch coverage tests, branch-coverage report, and final branch-coverage screenshot.
+1. [Code coverage commit](https://github.com/sickDoughnut-007/SE-submissions/commit/792115374b9105281faf60c01954ff088d8015e7): code-coverage tests and screenshot.
+2. [Branch coverage commit](https://github.com/sickDoughnut-007/SE-submissions/commit/765e89345cabb1382fe955088f6ef8fbc8d2533b): branch-coverage tests and screenshot.
 
 No Lab 7 handout was supplied; this submission covers Lab 6.

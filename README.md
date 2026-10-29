@@ -100,16 +100,6 @@ SE-submissions/
     ├── README.md
     ├── mobile_data_plan.py
     ├── pytest.ini
-    ├── reports/
-    │   ├── branch_coverage.json
-    │   ├── branch_coverage.txt
-    │   ├── code_coverage.json
-    │   ├── code_coverage.txt
-    │   ├── initial_branch.json
-    │   ├── initial_branch.txt
-    │   ├── initial_line.json
-    │   ├── initial_line.txt
-    │   └── summary.json
     ├── requirements.txt
     ├── run_coverage.py
     ├── screenshots/
@@ -219,7 +209,7 @@ The reflection document identifies the missing questions in the supplied PDF.
 
 The [Lab 6 submission](Lab%206/README.md) includes the unchanged assigned
 application, two starter tests, separate code and branch coverage test files,
-baseline and final reports, and actual Windows Terminal screenshots of the final runs.
+and actual Windows Terminal screenshots of the final runs.
 
 - Code coverage: **37/37 statements (100%)**, 13 passing tests.
 - Branch coverage: **26/26 branch outcomes (100%)**, 53 passing tests.
