@@ -1,0 +1,13 @@
+> python -m coverage run --source=mobile_data_plan -m pytest -q test_mobile_data_plan.py
+..                                                                       [100%]
+2 passed in 0.12s
+
+> python -m coverage report -m
+Name                  Stmts   Miss  Cover   Missing
+---------------------------------------------------
+mobile_data_plan.py      37     23    38%   6, 8, 11, 15-23, 28, 30, 35-45
+---------------------------------------------------
+TOTAL                    37     23    38%
+
+> python -m coverage json -o reports/initial_line.json
+Wrote JSON report to reports/initial_line.json
