@@ -189,3 +189,19 @@ Final results: **Pylint 10.00/10**, **Bandit 0 findings**, **Flake8 0 violations
 Three tool-focused commits are mirrored from the
 [personal fork](https://github.com/sickDoughnut-007/L5_45_ticket_booking_system).
 The reflection document identifies the missing questions in the supplied PDF.
+
+## Lab 6
+
+**Code and Branch Coverage Analysis - Mobile Data Plan (assigned project 45)**
+
+The [Lab 6 submission](Lab%206/README.md) includes the unchanged assigned
+application, two starter tests, separate code and branch coverage test files,
+baseline and final reports, and screenshots of captured final terminal output.
+
+- Code coverage: **37/37 statements (100%)**, 13 passing tests.
+- Branch coverage: **26/26 branch outcomes (100%)**, 53 passing tests.
+- Combined test run: **68 passing tests**, including the starter tests.
+- Two separate commits add the code-coverage and branch-coverage deliverables.
+
+The Lab 6 README explains the results, boundaries, reproduction commands,
+and screenshot capture method.
